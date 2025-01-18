@@ -1,4 +1,4 @@
-const apiUrl = "https://54.235.36.149:8080"; // Change this if your backend is deployed elsewhere
+const apiUrl = "http://54.235.36.149:8080"; // Change this if your backend is deployed elsewhere
 
 // Submit Problem
 const problemForm = document.getElementById("problem-form");
@@ -18,7 +18,7 @@ problemForm.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch(`${apiUrl}/problems`, {
+        const response = await fetch(`${apiUrl}/api/problems`, {
             method: "POST",
             body: formData,
         });
@@ -41,7 +41,7 @@ async function loadProblems() {
     problemList.innerHTML = "Loading...";
 
     try {
-        const response = await fetch(`${apiUrl}/problems`);
+        const response = await fetch(`${apiUrl}/api/problems`);
         const problems = await response.json();
 
         problemList.innerHTML = "";
