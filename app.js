@@ -1,4 +1,4 @@
-const apiUrl = "http://54.235.36.149:8080"; // Change this if your backend is deployed elsewhere
+const apiUrl = "https://54.235.36.149:8080"; // Change this if your backend is deployed elsewhere
 
 // Submit Problem
 const problemForm = document.getElementById("problem-form");
